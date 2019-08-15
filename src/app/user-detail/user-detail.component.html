@@ -1,0 +1,32 @@
+<div *ngIf="user" class="">
+  <h1 class="display-4 mt-3 mb-5 text-center">User details</h1>
+  <ul class="list-group list-group-flush">
+    <div class="d-flex">
+      <div class="container-fluid p-0">
+        <li class="list-group-item "><strong>Id:</strong> {{ user.id }}</li>
+        <li class="list-group-item bg-light border-bottom-0">
+          <strong>Login:</strong> {{ user.login }}
+        </li>
+      </div>
+      <img
+        class=""
+        [src]="user.avatar_url"
+        alt="avatar"
+        style="height: 98.2px"
+      />
+    </div>
+    <li class="list-group-item">
+      <strong>Link:</strong>
+      <a
+        [href]="user.html_url"
+        class="text-dark"
+        onclick="event.preventDefault(); window.open(this.href, '_blank')"
+      >
+        {{ user.html_url }}</a
+      >
+    </li>
+    <li class="list-group-item bg-light border-bottom">
+      <strong>Repos:</strong> {{ user.repos }}
+    </li>
+  </ul>
+</div>

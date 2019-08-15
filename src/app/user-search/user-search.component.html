@@ -1,0 +1,28 @@
+<div class="container-fluid py-3">
+  <form [formGroup]="searchingForm" (ngSubmit)="onSubmit(userNameInput.value)">
+    <div class="form-group">
+      <label>Username</label>
+      <div class="d-flex">
+        <input
+          #userNameInput
+          [class.is-invalid]="
+            (userName.invalid && userName.touched) ||
+            (userName.invalid && isSubmit)
+          "
+          formControlName="userName"
+          type="text"
+          class="form-control"
+          placeholder="Username"
+        />
+        <button class="btn btn-primary ml-2 px-4" type="submit">
+          Find
+        </button>
+      </div>
+      <small
+        [class.d-none]="userName.valid || (userName.untouched && !isSubmit)"
+        class="text-danger"
+        >Username is required</small
+      >
+    </div>
+  </form>
+</div>

@@ -1,0 +1,9 @@
+.app-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+:hover {
+  text-decoration: none;
+}

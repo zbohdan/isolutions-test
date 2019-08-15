@@ -1,0 +1,5 @@
+.start-container {
+  height: 400px;
+  background: url('../../assets/images/Octocat.png') center 50px / auto
+    calc(100% - 50px) no-repeat;
+}
